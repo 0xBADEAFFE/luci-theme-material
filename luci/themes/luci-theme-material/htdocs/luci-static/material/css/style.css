@@ -2,7 +2,7 @@
  *  Material is a clean HTML5 theme for LuCI. It is based on luci-theme-bootstrap and MUI
  *
  *  luci-theme-material
- *      Copyright 2015 Lutty Yang <lutty@wcan.in>
+ *      Copyright 2015-2018 Lutty Yang <lutty@wcan.in>
  *
  *  Have a bug? Please create an issue here on GitHub!
  *      https://github.com/LuttyYang/luci-theme-material/issues

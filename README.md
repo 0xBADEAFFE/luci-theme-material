@@ -22,7 +22,7 @@ Authors
 License
 -------
 
-LuCI Theme Material: Copyright 2015 Lutty Yang
+LuCI Theme Material: Copyright 2015-2018 Lutty Yang
 
 LuCI Theme Bootstrap: Copyright 2012 Nut & Bolt
 
