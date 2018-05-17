@@ -34,16 +34,16 @@
     var mainNodeName = undefined;
 
     var nodeUrl = "";
-    (function(node){
-        if (node[0] == "admin"){
+    (function (node) {
+        if (node[0] == "admin") {
             luciLocation = [node[1], node[2]];
-        }else{
+        } else {
             luciLocation = node;
         }
 
-        for(var i in luciLocation){
+        for (var i in luciLocation) {
             nodeUrl += luciLocation[i];
-            if (i != luciLocation.length - 1){
+            if (i != luciLocation.length - 1) {
                 nodeUrl += "/";
             }
         }
@@ -92,7 +92,7 @@
             //ul.fadeIn(200);
         } else {
             ul.slideUp(200, function () {
-            //ul.fadeOut(200, function () {
+                //ul.fadeOut(200, function () {
                 menu.removeClass("active");
                 ul.removeClass("active");
             });
@@ -203,7 +203,7 @@
 
     $(".cbi-section-table-titles, .cbi-section-table-descr, .cbi-section-descr").each(function () {
         var that = $(this);
-        if (that.text().trim() == ""){
+        if (that.text().trim() == "") {
             that.css("display", "none");
         }
     });
