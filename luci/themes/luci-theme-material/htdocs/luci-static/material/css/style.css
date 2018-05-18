@@ -484,7 +484,7 @@ table>thead>tr>th {
     text-align: center;
 }
 
-fieldset>table>tbody>tr:nth-of-type(2n) {
+fieldset>table>tbody>tr {
     background-color: #f9f9f9;
 }
 
@@ -685,8 +685,8 @@ form.inline+form.inline,
     background-color: #D4D4D4;
 }
 
-.cbi-section-remove:nth-of-type(2n),
-.cbi-section-node:nth-of-type(2n) {
+.cbi-section-remove,
+.cbi-section-node {
     background-color: #ffffff;
 }
 
@@ -744,7 +744,7 @@ form.inline+form.inline,
 }
 
 .cbi-section-table-titles {
-    background-color: #d4d4d4;
+    background-color: #d4d4d4 !important;
 }
 
 .cbi-section-table {
