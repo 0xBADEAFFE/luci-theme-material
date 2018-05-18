@@ -69,6 +69,7 @@ h6 {
 html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
@@ -533,6 +534,7 @@ td>table>tbody>tr>td {
 
 .cbi-button {
     -webkit-appearance: none;
+    appearance: none;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.87);
     background-color: #F0F0F0;
@@ -1018,6 +1020,7 @@ small {
     margin: 0 0 18px;
     line-height: 1.5rem;
     -moz-border-radius: 3px;
+    border-radius: 3px;
     white-space: pre-wrap;
     word-wrap: break-word;
     font-size: 1.4rem;
