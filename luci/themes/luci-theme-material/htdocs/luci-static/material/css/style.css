@@ -839,8 +839,8 @@ td>.ifacebadge {
     width: 100%;
     min-height: 14rem;
     padding: 0.8rem;
-    font-size: 0.8rem;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: small;
+    font-family: monospace;
     color: black;
 }
 
