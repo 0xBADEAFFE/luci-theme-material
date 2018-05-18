@@ -17,7 +17,8 @@
  *
  *  Licensed to the public under the Apache License 2.0
  */
-(function ($) {
+
+(function($) {
     $(".page_loading").fadeOut(200);
 
     /**
@@ -29,12 +30,11 @@
         return text.replace(/[ \t\n\r]+/g, " ");
     }
 
-
     var lastNode = undefined;
     var mainNodeName = undefined;
 
     var nodeUrl = "";
-    (function (node) {
+    (function(node) {
         if (node[0] == "admin") {
             luciLocation = [node[1], node[2]];
         } else {
@@ -60,15 +60,15 @@
             return true;
         }
 
-        $(".main > .main-left > .nav > .slide > .menu").each(function () {
+        $(".main > .main-left > .nav > .slide > .menu").each(function() {
             var ulNode = $(this);
-            ulNode.next().find("a").each(function () {
+            ulNode.next().find("a").each(function() {
                 var that = $(this);
                 var href = that.attr("href");
 
                 if (href.indexOf(nodeUrl) != -1) {
                     ulNode.click();
-                    ulNode.next(".slide-menu");//.stop(true, true);
+                    ulNode.next(".slide-menu"); //.stop(true, true);
                     lastNode = that.parent();
                     lastNode.addClass("active");
                     ret = true;
@@ -82,7 +82,7 @@
     /**
      * menu click
      */
-    $(".main > .main-left > .nav > .slide > .menu").click(function () {
+    $(".main > .main-left > .nav > .slide > .menu").click(function() {
         var ul = $(this).next(".slide-menu");
         var menu = $(this);
         if (!ul.hasClass("active")) {
@@ -91,7 +91,7 @@
             ul.slideDown(200);
             //ul.fadeIn(200);
         } else {
-            ul.slideUp(200, function () {
+            ul.slideUp(200, function() {
                 //ul.fadeOut(200, function () {
                 menu.removeClass("active");
                 ul.removeClass("active");
@@ -103,7 +103,7 @@
     /**
      * hook menu click and add the hash
      */
-    $(".main > .main-left > .nav > .slide > .slide-menu > li > a").click(function () {
+    $(".main > .main-left > .nav > .slide > .slide-menu > li > a").click(function() {
         if (lastNode != undefined) lastNode.removeClass("active");
         $(this).parent().addClass("active");
         $(".page_loading").fadeIn(200);
@@ -113,7 +113,7 @@
     /**
      * fix menu click
      */
-    $(".main > .main-left > .nav > .slide > .slide-menu > li").click(function () {
+    $(".main > .main-left > .nav > .slide > .slide-menu > li").click(function() {
         if (lastNode != undefined) lastNode.removeClass("active");
         $(this).addClass("active");
         $(".page_loading").fadeIn(200);
@@ -132,15 +132,14 @@
     $(".cbi-button-up").val("");
     $(".cbi-button-down").val("");
 
-
     /**
      * hook other "A Label" and add hash to it.
      */
-    $("#maincontent > .container").find("a").each(function () {
+    $("#maincontent > .container").find("a").each(function() {
         var that = $(this);
         var onclick = that.attr("onclick");
         if (onclick == undefined || onclick == "") {
-            that.click(function () {
+            that.click(function() {
                 var href = that.attr("href");
                 if (href.indexOf("#") == -1) {
                     $(".page_loading").fadeIn(200);
@@ -154,7 +153,7 @@
      * Sidebar expand
      */
     var showSide = false;
-    $(".showSide").click(function () {
+    $(".showSide").click(function() {
         if (showSide) {
             $(".darkMask").fadeOut(200);
             $(".main-left").animate({
@@ -172,8 +171,7 @@
         }
     });
 
-
-    $(".darkMask").click(function () {
+    $(".darkMask").click(function() {
         if (showSide) {
             showSide = false;
             $(".darkMask").fadeOut(200);
@@ -184,7 +182,7 @@
         }
     });
 
-    $(window).resize(function () {
+    $(window).resize(function() {
         if ($(window).width() > 921) {
             $(".main-left").css("width", "");
             $(".darkMask");
@@ -196,18 +194,17 @@
     /**
      * fix legend position
      */
-    $("legend").each(function () {
+    $("legend").each(function() {
         var that = $(this);
         that.after("<span class='panel-title'>" + that.text() + "</span>");
     });
 
-    $(".cbi-section-table-titles, .cbi-section-table-descr, .cbi-section-descr").each(function () {
+    $(".cbi-section-table-titles, .cbi-section-table-descr, .cbi-section-descr").each(function() {
         var that = $(this);
         if (that.text().trim() == "") {
             that.css("display", "none");
         }
     });
-
 
     $(".main-right").focus();
     $(".main-right").blur();
@@ -218,7 +215,7 @@
         switch (mainNodeName) {
             case "node-status-system_log":
             case "node-status-kernel_log":
-                $("#syslog").focus(function () {
+                $("#syslog").focus(function() {
                     $("#syslog").blur();
                     $(".main-right").focus();
                     $(".main-right").blur();
@@ -234,5 +231,4 @@
                 break;
         }
     }
-
 })(Zepto);
