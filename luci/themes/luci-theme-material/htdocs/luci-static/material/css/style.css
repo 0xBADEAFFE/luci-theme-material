@@ -429,7 +429,7 @@ fieldset {
     overflow-x: auto;
     overflow-y: hidden;
     border-radius: 0;
-    background-color: #FFF;
+    background-color: #ffffff;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .16), 0 0 2px 0 rgba(0, 0, 0, .12);
     -webkit-overflow-scrolling: touch;
 }
@@ -648,12 +648,15 @@ form.inline+form.inline,
     padding: 0.5rem 0.8rem;
 }
 
+.tabs>li {
+    border-bottom: 0.18751rem solid #bdbdbd;
+}
+
 .tabs>li[class~="active"],
 .tabs>li:hover {
     cursor: pointer;
-    border-bottom: 0.2rem solid #0099CC;
+    border-bottom: 0.18751rem solid #0099CC;
     color: #0099CC;
-    margin-bottom: -0.18751rem;
 }
 
 .tabs>li[class~="active"]>a {
@@ -661,7 +664,7 @@ form.inline+form.inline,
 }
 
 .tabs>li:hover {
-    border-bottom: 0.18751rem solid #C9C9C9;
+    border-bottom: 0.18751rem solid #d4d4d4;
 }
 
 .cbi-tabmenu {
@@ -671,11 +674,11 @@ form.inline+form.inline,
 }
 
 .cbi-tabmenu>li:hover {
-    background-color: #F1F1F1;
+    background-color: #f1f1f1;
 }
 
 .cbi-tabmenu>li[class~="cbi-tab"] {
-    background-color: white;
+    background-color: #f9f9f9;
 }
 
 .cbi-tabmenu {
@@ -684,7 +687,7 @@ form.inline+form.inline,
 
 .cbi-section-remove:nth-of-type(2n),
 .cbi-section-node:nth-of-type(2n) {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
 }
 
 .cbi-section-node-tabbed {
@@ -695,7 +698,7 @@ form.inline+form.inline,
     border-right: 1px solid #D4D4D4;
 }
 
-.cbi-tabcontainer>.cbi-value:nth-of-type(2n) {
+.cbi-tabcontainer>.cbi-value {
     background-color: #f9f9f9;
 }
 
@@ -738,6 +741,18 @@ form.inline+form.inline,
 .cbi-section-table-descr>.cbi-section-table-cell,
 .cbi-section-table-titles>.cbi-section-table-cell {
     border: none;
+}
+
+.cbi-section-table-titles {
+    background-color: #d4d4d4;
+}
+
+.cbi-section-table {
+    background-color: #f9f9f9;
+}
+
+.cbi-rowstyle-1 {
+    background-color: #f9f9f9;
 }
 
 .cbi-rowstyle-2 {
