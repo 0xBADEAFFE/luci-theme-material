@@ -4,4 +4,3 @@ uci batch <<-EOF
 	set luci.main.mediaurlbase=/luci-static/material
 	commit luci
 EOF
-exit 0
