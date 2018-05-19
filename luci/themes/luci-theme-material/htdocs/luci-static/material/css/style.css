@@ -728,12 +728,12 @@ form.inline+form.inline,
 }
 
 .cbi-value-title {
-    word-wrap: break-word;
+    word-wrap: normal;
     padding-top: 0.6rem;
     width: 23rem;
     float: left;
     text-align: right;
-    padding-right: 2rem;
+    padding-right: 1.5rem;
     display: table-cell;
 }
 
@@ -1151,7 +1151,7 @@ header>.container>.pull-right>* {
 }
 
 .node-main-login footer {
-    bottom: 0;
+    bottom: auto;
     position: absolute;
     width: 100%;
 }
